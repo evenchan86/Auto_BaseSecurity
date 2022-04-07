@@ -1,0 +1,8 @@
+---
+- hosts: secrity-hosts
+  tasks:
+    - name: config security
+      import_role:
+        name: security
+      tags:
+        - security

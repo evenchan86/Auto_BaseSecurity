@@ -1,0 +1,6 @@
+localhost ansible_connection=local
+[secrity-hosts]
+192.168.116.107 ansible_ssh_user=root ansible_ssh_port=22 ansible_ssh_pass="creatoo@1234#abc@syskey"
+192.168.116.108 ansible_ssh_user=root ansible_ssh_port=22 ansible_ssh_pass="creatoo@1234#abc@syskey"
+192.168.116.109 ansible_ssh_user=root ansible_ssh_port=22 ansible_ssh_pass="creatoo@1234#abc@syskey"
+192.168.116.110 ansible_ssh_user=root ansible_ssh_port=22 ansible_ssh_pass="creatoo@1234#abc@syskey"
