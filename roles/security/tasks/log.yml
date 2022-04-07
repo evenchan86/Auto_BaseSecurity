@@ -1,3 +1,12 @@
+- name: setup logrotate configuration file
+  template:
+    src: logrotate.conf.j2
+    dest: /etc/logrotate.conf
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
+
 - name: set /var/log/messages only append but modify
   file:
     attributes: '+a'

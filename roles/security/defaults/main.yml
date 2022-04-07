@@ -31,3 +31,29 @@ remote_log_ip: ""
 max_day: 90
 min_day: 10
 warn_age: 7
+
+logrotate_include_dir: /etc/logrotate.d
+
+logrotate_options:
+- monthly
+- su root syslog
+- rotate 6
+- create
+
+logrotate_wtmp:
+  logs:
+  - /var/log/wtmp
+  options:
+  - missingok
+  - monthly
+  - create 0664 root utmp
+  - rotate 3
+
+logrotate_btmp:
+  logs:
+  - /var/log/btmp
+  options:
+  - missingok
+  - monthly
+  - create 0660 root utmp
+  - rotate 1
